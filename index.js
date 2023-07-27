@@ -59,7 +59,7 @@ class Mp32Wav {
     const fileFullPath = path.join(savePath, fileFullName)
 
     try {
-      const wavData = wav.encode(buffer, {sampleRate: sampleRate, float: float, channels: channels})
+      const wavData = wav.encode(buffer, {sampleRate: sampleRate, channels: channels})
       utils.saveToPath(fileFullPath, wavData)
       return fileFullPath
     } catch (err) {
